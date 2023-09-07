@@ -1,0 +1,34 @@
+@font-face { font-family: Indie Flower; src: url('media/fonts/IndieFlower-Regular.ttf'); } 
+
+
+body {
+    background-color: rgb(220, 218, 209);
+    font-family: Indie Flower;
+    transition-delay: 1s;
+    
+}
+
+.enter {
+    color: red;
+}
+
+canvas {
+    z-index: -1;
+    display: block;
+    position: relative;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    left: 37%;
+    right: 35%;
+}
+
+h3 {
+    color: grey;
+    position: absolute;
+    top: 10%;
+    left: 38%;
+    right: 35%;
+}

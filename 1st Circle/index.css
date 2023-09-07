@@ -1,0 +1,116 @@
+* {
+    background-color: black;
+    animation-name: test;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+body {margin: 0; height: 100%; overflow: hidden}
+
+@keyframes  test{
+    0% {background-color: black;}
+    50% {background-color: rgb(15, 15, 15);}
+    100% {background-color: black;}
+  }
+
+
+
+@keyframes shadows{
+0% {border-color: black; float: left}
+50% {border-color: rgb(15, 15, 15);}
+100% {border-color: black; float: right}
+
+}
+
+.shadows {
+    border-radius: 50%;
+    color: rgb(18, 18, 18);
+}
+
+.shadow1 {
+    width: 80px;
+    height: 50px;
+
+    position: relative;
+    animation: shadow1 2s infinite alternate-reverse;
+
+  }
+
+  .shadow2 {
+    width: 70px;
+    height: 90px;
+    position: relative;
+    animation: shadow2 1.5s infinite reverse;
+
+  }
+
+  .shadow3 {
+    width: 90px;
+    height: 60px;
+    position: relative;
+    animation: shadow3 2s infinite reverse;
+
+  }
+
+  .shadow4 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: shadow4 2s infinite reverse;
+
+  }
+
+  .shadow5 {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    animation: shadow5 1.5s infinite;
+
+  }
+  
+  .shadow6 {
+    width: 20px;
+    height: 10px;
+    position: relative;
+    animation: shadow6 1s infinite reverse;
+
+  }
+
+  .shadowtext {
+    width: 1120px;
+    height: 10px;
+    position: relative;
+    animation: shadowtext 40s reverse;
+
+  }
+  @keyframes shadow1 {
+    from {left: -1200px; bottom: 300px;}
+    to {left: 3000px; bottom: -1000px;}
+  }
+  @keyframes shadow2 {
+    from {left: -1200px; top: -300px;}
+    to {left: 3000px; top: 1000px;}
+  }
+  @keyframes shadow3 {
+    from {left: -1200px; bottom: 300px;}
+    to {left: 2000px; bottom: -1300px;}
+  }
+
+  @keyframes shadow4 {
+    from {left: -1200px; bottom: 300px;}
+    to {left: 3000px; bottom: -1000px;}
+  }
+  @keyframes shadow5 {
+    from {left: -1200px; top: -300px;}
+    to {left: 3000px; top: 1000px;}
+  }
+  @keyframes shadow6 {
+    from {left: -1200px; bottom: 300px;}
+    to {left: 2000px; bottom: -1300px;}
+  }
+
+  @keyframes shadowtext {
+    from {left: -2000px;}
+    to {left: 3000px;}
+  }
+    

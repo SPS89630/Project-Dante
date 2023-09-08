@@ -7,6 +7,7 @@ body {
 
 .fadein {
     position: fixed;
+    /* opacity: 0; */
     height:100%;
     width:100%;
     display: grid;
@@ -15,36 +16,36 @@ body {
 
 .b0 {
 background: black;
-animation: fade 5s;
+animation: fade 3s;
 animation-delay: 1s;
 animation-fill-mode: forwards;
 }
 
 .b1 {
 background: black;
-animation: fade 5s;
-animation-delay: 3s;
+animation: fade 3s;
+animation-delay: 2.5s;
 animation-fill-mode: forwards;
 }
 
 .b2 {
 background: black;
-animation: fade 5s;
-animation-delay: 5s;
+animation: fade 3s;
+animation-delay: 4s;
 animation-fill-mode: forwards;
 }
 
 .b3 {
 background: black;
-animation: fade 5s;
-animation-delay: 7s;
+animation: fade 3s;
+animation-delay: 5.5s;
 animation-fill-mode: forwards;
 }
 
 .b4 {
 background: black;
-animation: fade 5s;
-animation-delay: 9s;
+animation: fade 3s;
+animation-delay: 7s;
 animation-fill-mode: forwards;
 }
 

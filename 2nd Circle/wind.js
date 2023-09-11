@@ -1,5 +1,5 @@
 
-let snowflakes = []; // array to hold snowflake objects
+let windcurrents = [];
 
 function setup() {
   createCanvas(windowWidth - 20, windowHeight - 20);
@@ -9,48 +9,37 @@ function setup() {
 
 function draw() {
   background('white');
-  let t = frameCount / 1000; // update time
+  let t = frameCount / 1000;
 
-  // create a random number of snowflakes each frame
+
   for (let i = 0; i < random(0.001); i++) {
-    snowflakes.push(new snowflake()); // append snowflake object
+    windcurrents.push(new windcurrent());
   }
 
-  // loop through snowflakes with a for..of loop
-  for (let flake of snowflakes) {
-    flake.update(t); // update snowflake position
-    flake.display(); // draw snowflake
+  for (let current of windcurrents) {
+    current.update(t);
+    current.display();
   }
 }
 
-// snowflake class
-function snowflake() {
-  // initialize coordinates
+function windcurrent() {
   this.posX = 0;
   this.posY = random(-50, 0);
   this.initialangle = random(0, 2 * PI);
   this.size = random(2, 3);
 
-  // radius of snowflake spiral
-  // chosen so the snowflakes are uniformly spread out in area
   this.radius = sqrt(random(pow(width / 2, 2)));
 
   this.update = function(time) {
-    // x position follows a circle
-    let w = 3; // angular speed
+    let w = 3;
     let angle = w * time + this.initialangle;
     this.posY = width / 2 + this.radius * sin(angle);
-
-    // different size snowflakes fall at slightly different y speeds
     this.posX += pow(this.size, 5);
-
-    // delete snowflake if past end of screen
     if (this.posX > width) {
-      let index = snowflakes.indexOf(this);
-      snowflakes.splice(index, 1);
+      let index = windcurrents.indexOf(this);
+      windcurrents.splice(index, 1);
     }
   };
-
   this.display = function() {
     rect(this.posX, this.posY, 100, this.size)
   };

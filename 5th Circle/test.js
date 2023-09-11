@@ -1,5 +1,5 @@
 
-let water = []; // array to hold wateranimation objects
+let water = []; 
 var x = -1000;
 var y = 600;
 var d = 40;
@@ -43,17 +43,17 @@ function draw() {
       ellipse(j * 213,930,10,100);
       }
 
-  let t = frameCount / 1000; // update time
+  let t = frameCount / 1000;
 
-  // create a random number of water each frame
+  // create random number of object each frame
   for (let i = 0; i < random(-5,1); i++) {
-    water.push(new wateranimation()); // append wateranimation object
+    water.push(new wateranimation());
   }
 
-  // loop through water with a for..of loop
+
   for (let waterflow of water) {
-    waterflow.update(t); // update wateranimation position
-    waterflow.display(); // draw wateranimation
+    waterflow.update(t);
+    waterflow.display();
   }
   fill(111, 52, 7)
   quad(x-150, y+0, x+20, y+120, x+180, y+120, x+400, y+0);
@@ -83,29 +83,27 @@ function draw() {
 }
 
 
-// wateranimation class
+
 function wateranimation() {
-  // initialize coordinates
+
   this.posX = -100;
   this.posY = random(-50, 0);
   this.initialangle = random(0, 2 * PI);
   this.sizeY = random(2, 3);
   this.sizeX = random(80, 200);
 
-  // radius of wateranimation spiral
-  // chosen so the water are uniformly spread out in area
   this.radius = sqrt(random(pow(width / 4, 2)));
 
   this.update = function(time) {
-    // x position follows a circle
-    let w = 1; // angular speed
+
+    let w = 1; 
     let angle = w * time + this.initialangle;
     this.posY = width / 2 + this.radius * sin(angle);
 
-    // different sizeY water fall at slightly different y speeds
+
     this.posX += pow(this.sizeY,1.4);
 
-    // delete wateranimation if past end of screen
+
     if (this.posX > width) {
       let index = water.indexOf(this);
       water.splice(index, 1);
